@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+.dashboard{
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    transition: all 3s ease;
+}
+.menu{
+    width: 7%;
+    min-height: 110vh;
+    background-color: white;
+    border-right: 1px solid black;
+    transition: all .2s ease-in-out;
+}
+.menu-sub{
+    width: 20%;
+    transition: all .2s ease;
+}
+.menu-top{
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    transition: all .2s ease;
+}
+.logo{
+    height: 70px;
+}
+.arrow{
+    display: none;
+    height: 20px;
+    cursor: pointer;
+}
+.arrow-sub{
+    display: block;
+}
+.dash-clock{
+    display: flex;
+    flex-direction: row;
+    background-color: #5852FE;
+    min-height: 8vh;
+    padding: 0 2rem;
+    transition: all .2s ease ;
+}
+.dash-clock-sub{
+    padding: 0 1rem;
+}
+.tooltip{
+    position: relative;
+    display: inline-block !important;
+}
+.tooltip .tooltip-text{
+    position: absolute;
+    color: white;
+    background-color: black;
+    padding: 5px 12px;
+    border-radius: 5px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s;
+    visibility: hidden;
+}
+.tooltip .tooltip-text::after{
+    content: "";
+    position: absolute;
+    right: 100%;
+    bottom: 30%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+}
+
+.show{
+    cursor: pointer;
+    height: 24px !important;
+}
+.changer-menu{
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 65vh;
+    justify-content: center;
+    padding: 0 2rem;
+    transition: all .2s ease ;
+}
+.changer-sub{
+    padding: 0 1rem;
+}
+[class*="line"] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+[class*="tag"]{
+    display: none;
+    text-decoration: none;
+    color: black;
+    font-family: 'poppins', sans-serif;
+    transition: all 1s ease;
+    opacity: 0;
+}
+[class*="tag"]:hover{
+    color: blue;
+}
+.overall-sub{
+    display: block;
+    opacity: 1;
+}
+.icon-img{
+    height: 21px;
+}
+.icon-set{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+    padding: 0 1px;
+}
+.icon-set img{
+    height: 18px;
+    padding: 0 1rem;
+}
+.icon-set li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.icon-text{
+    display: block;
+}
+.icon-text a{
+    text-decoration: none;
+    color: black;
+}
+.icon-text a:hover .icon-set li{
+    background-color: #5852FE !important;
+}
+.footer{
+    min-height: 25vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+    gap: 20px;
+    background-color: #5852FE;
+    transition: all .2s ease ;
+}
+.footer-sub{
+    padding: 0 1rem;
+}
+[class*="base"]{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+[class*="liners"]{
+    color: white;
+}
+[class*="liners"]:hover{
+    color: white;
+}
+.fot-text{
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+}
+.fot-text-sub{
+    display: flex;
+}
+.fot-text a{
+    color: white;
+    text-decoration: none;
+}
+.mobile-footer{
+    display: none;
+}
+.mobile-container{
+    display: none;
+}
+main{
+    width: 93%;
+    height: 100vh;
+    padding: 2% 4%;
+    transition: all 3s ease;
+    font-weight: 600;
+}
+.main-sub{
+    width: 80%;
+    transition: all 1s ease;
+}
+nav{
+    transition: all 1s ease;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 65px;
+}
+.toggle{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: all .5s ease-in-out;
+}
+.toggle div{
+    background-color: black;
+    height: 2px;
+    width: 30px;
+    transition: all .4s ease-in-out;
+}
+.firstr{
+    transform: rotate(-45deg) translate(1px, 11px);
+    width: 33px;
+    transition: all .4s ease-in-out;
+
+}
+.thirdr{
+    transform: rotate(45deg) translate(1px, -11px);
+    width: 33px;
+    transition: all .4s ease-in-out;
+}
+.secondr{
+    opacity: 0;
+}
+.controller{
+    transition: all 1s ease;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+    height: 5vh;
+}
+.input-field{
+    height: 30px;
+    width: 100%;
+    transition: all 1s ease;
+}
+.input-field input{
+    transition: all 1s ease;
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    outline: none;
+    border: .1px solid rgb(104, 99, 99);
+}
+.embeded-input{
+    transition: all 1s ease;
+    height: 20px;
+    position: absolute;
+    right: 13%;
+    top: 5%;
+    /* transform: translate(-50%, 50%); */
+}
+.embed-input{
+    height: 22px;
+    transition: all 1s ease;
+}
+.avater{
+    height: 32px;
+    transition: all 1s ease;
+}
+.head-one{
+    margin: 18px 0;
+    height: 5vh;
+    transition: all 1s ease;
+}
+.counter{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 70px;
+    min-height: 22vh;
+    margin: 30px 0 45px 0;
+    transition: all 1s ease;
+}
+.first-count{
+    height: 22vh;
+    background-color: #5852FE;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 1s ease;
+}
+.first-count h1{
+    font-size: 40px;
+    transition: all 1s ease;
+}
+.second-count{
+    height: 22vh;
+    background-color: #34A853;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 1s ease;
+}
+.point-controller{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    transition: all 1s ease;
+}
+.point-controller h1{
+    font-size: 40px;
+    transition: all 1s ease;
+}
+.third-count{
+    height: 22vh;
+    background-color: #F5761A;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 1s ease;
+}
+.third-count h1{
+    font-size: 40px;
+    transition: all 1s ease;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    transition: all 1s ease;
+    padding: 90px 0 !important;
+}
+th{
+    padding: 10px;
+    transition: all 1s ease;
+}
+td{
+    border-top: 1px solid rgb(104, 99, 99);
+    padding: 12px;
+    transition: all 1s ease;
+}
+.number{
+    padding: 0 12px;
+    text-align: right;
+    transition: all 1s ease;
+}
+.top{
+    padding-left: 2.7rem;
+    transition: all 1s ease;
+}
+.col-one{
+    width: 70%;
+    text-align: left;
+    transition: all 1s ease;
+}
+.col-two{
+    text-align: center;
+    width: 15%;
+    transition: all 1s ease;
+}
+
+@media screen and (max-width: 950px) {
+    .embeded-input{
+        height: 17px;
+        position: absolute;
+        right: 27%;
+        top: 7.2% !important;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .menu{
+        display: none;
+    }
+    main{
+        width: 100%;
+        padding: 5% 4%;
+    }
+    nav{
+        gap: 30px;
+    }
+    .input-field input{
+        margin-top: 7px;
+    }
+    .cleng{
+        margin-top: 15px;
+    }
+
+    .embeded-input{
+        position: absolute;
+        right: 19%;
+        top: 12%;
+        height: 17px;
+    }
+    .avater{
+        margin-top: 13px;
+        height: 25px;
+    }
+    .embed-input{
+        position: absolute;
+        top: 1%;
+        left: 90%;
+        height: 17px;
+    }
+    .head-one h1{
+        margin-top: 5px;
+    }
+    .counter{
+        gap: 40px;
+        min-height: 22vh;
+    }
+    [class*="count"]{
+        font-size: 18px;   
+    }
+    [class*="count"]{
+        min-height: 22vh;
+    }
+    .col-one{
+        width: 74%;
+        text-align: left;
+    }
+    .col-two{
+        text-align: center;
+        width: 13%;
+    }
+    .toggle{
+        display: flex;
+        position: absolute;
+        top: 0;
+    }
+    .mobile-container{
+        background-color: white;
+        min-width: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+        top: 0;
+        margin-right: -600px;
+        transition: all .9s ease-in-out;
+        z-index: 1000;
+        box-shadow: 0 7px 29px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+    }
+    .mobile-container-toggler{
+        margin-right: 0;
+        min-width: 40%;
+    }
+    .mobile-dash-clock{
+        min-height: 8vh;
+        width: 100%;
+        background-color: #5852FE;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .mobile-dash-clock img{
+        height: 17px;
+    }
+    .mobile-dash-clock a{
+        color: white;
+        text-decoration: none;
+    }
+    .mobile-dash-clock li{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 0 2rem;
+        align-items: center;
+    }
+    .mobile-menu{
+        height: 61vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+    }
+    .icon-set li{
+        padding: 5px 0;
+    }
+    .icon-text a:hover .icon-set li{
+        color: white;
+        background-color: #5852FE !important;
+    }
+    .mobile-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        list-style: none;
+        background-color: #5852FE;
+        min-height: 20vh;
+        gap: 10px;
+        padding: 0rem 2rem;
+
+    }
+    .mobile-footer img{
+        height: 17px;
+    }
+    .mobile-footer li{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    .mobile-footer a{
+        text-decoration: none;
+        color: white;
+    }
+}

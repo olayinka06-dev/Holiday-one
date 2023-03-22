@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Poppins:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-width: 100%;
+    min-height: 110vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+}
+.hero{
+    min-width: 80%;
+    min-height: 100vh;
+    transition: all 1s ease;
+    /* background-color: green; */
+}
+.picture{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 1s ease;
+}
+.picture img{
+    height: 120px;
+    transition: all 1s ease;
+}
+label{
+    color: rgba(0, 0, 0, 0.64);
+    transition: all 1s ease;
+}
+.fill-in{
+    min-height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 170px;
+    transition: all 1s ease;
+}
+.fill-in input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.64);
+    border-radius: 7px;
+    transition: all 1s ease;
+}
+#mail{
+    color: red;
+    font-size: 13px;
+    visibility: hidden;
+}
+#pass{
+    color: red;
+    font-size: 13px;
+    visibility: hidden;
+}
+.agree{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    transition: all 1s ease;
+}
+.check{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 1s ease;
+}
+.mark{
+    border: 1px solid #1f1d58;
+    padding: 30px;
+    transition: all 1s ease;
+}
+
+.declare{
+    transition: all 1s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+}
+.declare p{
+    font-size: 16px;
+    transition: all 1s ease;
+}
+span a{
+    color:  #5852FE;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+.group{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    transition: all 1s ease;
+}
+.btn{
+    background-color: #5852FE;
+    padding: 15px 95px;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: all 1s ease;
+}
+.icon{
+    transition: all 1s ease;
+    border: none;
+    border-radius: 10px;
+    padding: 0 25px;
+    background: #FFFFFF;
+    /* box-shadow: -9px -9px 4px rgba(0, 0, 0, 0.25), 9px 9px 4px rgba(0, 0, 0, 0.25); */
+}
+.consider{
+    height: 40px;
+    transition: all 1s ease;
+}
+.here{
+    color: #5852FE;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    transition: all 1s ease;
+}
+.last p{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.64);
+    transition: all 1s ease;
+}
+footer{
+    width: 100%;
+   min-height: 10vh;
+    background-color: #5852FE;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    padding: 10px 0;
+    transition: all 1s ease;
+}
+.arrow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: all 1s ease;
+}
+.arrow a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 1s ease;
+}
+.rrr{
+    height: 15px;
+    transition: all 1s ease;
+}
+.privacy{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid white;
+    transition: all 1s ease;
+}
+.privacy a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 1s ease;
+}
+.terms{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid white;
+    transition: all 1s ease;
+}
+.terms a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 1s ease;
+}
+
+@media only screen and (max-width: 950px) {
+    .fill-in{
+        padding: 0;
+        gap: 15px;
+    }
+    label{
+        font-size: 13px;
+    }
+    .here{
+        font-size: 13px;
+    }
+    .declare p{
+        font-size: 13px;
+    }
+    .fullname{
+        font-size: 5px;
+    }
+    .btn{
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .last p{
+        font-size: 13px;
+    }
+    footer{
+        padding: 0 20px;
+    }
+    .rrr{
+        height: 13px;
+    }
+    .arrow a{
+        font-size: 11px;
+    }
+    .arrow{
+        border: none;
+    }
+    .privacy{
+        border: none;
+    }
+    .terms{
+        border: none;
+    }
+    .privacy a{
+        font-size: 11px;
+    }
+    .terms a{
+        font-size: 11px;
+    }
+    .declare{
+        padding-left: 10px;
+    }
+}
